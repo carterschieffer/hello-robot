@@ -109,7 +109,7 @@ class HackerSpeakGenerator {
                 $sentence .= $words[$i];
             }
 
-            $sentence = rtrim($sentence) . '. ';
+            $sentence = rtrim($sentence) . '.';
         }
 
         return $sentence;
