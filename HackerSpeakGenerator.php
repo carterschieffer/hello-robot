@@ -61,7 +61,17 @@ class HackerSpeakGenerator {
             'decrypt',
             'compromised',
             'brute-force',
-            'bonsoir'
+            'two-step verification',
+            'data dump',
+            'breach',
+            'disconnect',
+            'connect',
+            'protocol',
+            'backup',
+            'off the grid',
+            'malware',
+            'bonsoir',
+            'fsociety'
         );
         
         shuffle($words);
