@@ -2,6 +2,7 @@
 
 /*
     Name ideas:
+        HelloRobot
         RobotSpeak
         HackerSpeak
         RoboIpsum
