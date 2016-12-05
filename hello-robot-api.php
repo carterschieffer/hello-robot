@@ -1,11 +1,11 @@
 <?php
 
-class Hacker_Speak_API {
+class Hello_Robot_API {
 
     function call_api() {
-        require_once 'HackerSpeakGenerator.php';
+        require_once 'HelloRobotGenerator.php';
 
-        $generator = new HackerSpeakGenerator();
+        $generator = new HelloRobotGenerator();
         $sentence_number = 0;
         $paragraph_number = 5;
 
@@ -43,7 +43,7 @@ class Hacker_Speak_API {
     }
 }
 
-$api = new Hacker_Speak_API();
+$api = new Hello_Robot_API();
 $api->call_api();
 
 ?>

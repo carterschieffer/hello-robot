@@ -9,7 +9,7 @@
         RobotIpsum
 */
 
-class HackerSpeakGenerator {
+class HelloRobotGenerator {
 
     function GetWords() {
         $words = array(

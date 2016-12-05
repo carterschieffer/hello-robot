@@ -5,7 +5,7 @@
     <title>Document</title>
     <style>
         body{ background:#1B1D1E; color:#F8F8F2; font-size:14px; font-family:Consolas, Monaco, monospace; }
-        .hacker-speak-container{ width:100%; max-width:600px; margin:auto; }
+        .hello-robot-container{ width:100%; max-width:600px; margin:auto; }
     </style>
 </head>
 <body>
@@ -18,14 +18,14 @@
         <input type="submit" value="Bonsoir!">
     </form>
 
-    <div class="hacker-speak-container">
+    <div class="hello-robot-container">
         <?php
             $output = '';
 
             if (isset($_REQUEST['submit'])) {
-                require_once 'HackerSpeakGenerator.php';
+                require_once 'HelloRobotGenerator.php';
 
-                $generator = new HackerSpeakGenerator();
+                $generator = new HelloRobotGenerator();
                 $paragraph_number = 5;
                 if (isset($_REQUEST['paras'])) {
                     $paragraph_number = intval($_REQUEST['paras']);
