@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:900|VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="styles/bootstrap.css">
-    <style>
-        body{ background:#1B1D1E; color:#F8F8F2; font-size:14px; font-family:'VT323', Consolas, Monaco, monospace; }
-        /*.hello-robot-container{ width:100%; max-width:600px; margin:auto; }*/
-        h1{ font-family:'Raleway', sans-serif; font-weight:bold; font-size:64px; color:#b70007; }
-    </style>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>HELLO ROBOT</h1>
-                    <p>A <a href="http://en.wikipedia.org/wiki/Lorem_ipsum">lorem ipsum</a> generator utilizing terminology used on the TV show, <a href="https://en.wikipedia.org/wiki/Mr._Robot_(TV_series)">Mr. Robot</a>.</p>
+                    <div class="robotron">
+                        <h1>HELLO ROBOT</h1>
+                        <h3>A <a href="http://en.wikipedia.org/wiki/Lorem_ipsum">lorem ipsum</a> generator utilizing terminology used on the TV show, <a href="https://en.wikipedia.org/wiki/Mr._Robot_(TV_series)">Mr. Robot</a>.</h3>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
+
                     <form action="" method="get">
                         <input name="submit" type="hidden" value="1">
 
-                        Paragraphs:
-                        <input name="paras" type="text" value="5" maxlength="2">
-
-                        <input type="submit" value="Bonsoir!">
+                        <div class="input-group">
+                            <?php
+                                $paras = $_REQUEST['paras'];
+                                $paras = mb_convert_encoding($paras, 'UTF-8', 'UTF-8');
+                                $paras = htmlentities($paras, ENT_QUOTES, 'UTF-8');
+                            ?>
+                            <input class="form-control input-lg" name="paras" type="text" placeholder="Paragraphs" autocomplete="off" value="<?= $paras ?>">
+                            <span class="input-group-btn">
+                                <input class="btn btn-primary btn-lg" type="submit" value="Bonsoir!">
+                            </span>
+                        </div>
                     </form>
 
                     <div class="hello-robot-container">
@@ -54,7 +60,6 @@
                                 }
 
                                 $paragraphs = $generator->SpeakToMe($paragraph_number);
-
 
                                 $output .= '<div>';
                                 foreach ($paragraphs as $paragraph) {
