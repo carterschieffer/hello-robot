@@ -1,14 +1,5 @@
 <?php
 
-/*
-    Name ideas:
-        HelloRobot
-        RobotSpeak
-        HackerSpeak
-        RoboIpsum
-        RobotIpsum
-*/
-
 class HelloRobotGenerator {
 
     function GetWords() {
