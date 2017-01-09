@@ -30,6 +30,7 @@ p{ font-size:12px; line-height:1.8; color:#58625F; }
 .btn{ border-radius:0; }
 .btn-primary{ background-color:transparent; border:2px solid #F8F8F8; }
 .btn-primary:hover,.btn-primary:focus{ background-color:#D32027; color:#F8F8F8; border-color:#C31017; }
+.btn-primary:active,.btn-primary:active:hover,.btn-primary:active:focus{ background-color:#C31017; color:#F8F8F8; border-color:#B30007; }
 
 .btn:focus,
 .btn:active:focus,
@@ -38,7 +39,7 @@ p{ font-size:12px; line-height:1.8; color:#58625F; }
 .btn:active.focus,
 .btn.active.focus,
 :focus,
-a:focus{ outline:#58625F auto 5px; }
+a:focus{ outline:none; }
 
 .form-control:focus{
     border-color:#58625F;

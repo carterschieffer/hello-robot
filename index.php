@@ -27,9 +27,12 @@
 
                         <div class="input-group">
                             <?php
-                                $paras = $_REQUEST['paras'];
-                                $paras = mb_convert_encoding($paras, 'UTF-8', 'UTF-8');
-                                $paras = htmlentities($paras, ENT_QUOTES, 'UTF-8');
+                                $paras = null;
+                                if (isset($_REQUEST['paras'])) {
+                                    $paras = $_REQUEST['paras'];
+                                    $paras = mb_convert_encoding($paras, 'UTF-8', 'UTF-8');
+                                    $paras = htmlentities($paras, ENT_QUOTES, 'UTF-8');
+                                }
                             ?>
                             <input class="form-control input-lg" name="paras" type="text" placeholder="Paragraphs" autocomplete="off" value="<?= $paras ?>">
                             <span class="input-group-btn">
